@@ -1,4 +1,4 @@
-text = "hello"
+text = input()
 
 stack = []
 
