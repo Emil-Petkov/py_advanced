@@ -1,13 +1,13 @@
 text = "hello"
 
-lst_stack = []
+stack = []
 
 for el in text:
-    lst_stack.append(el)
+    stack.append(el)
 
 reverse_text = ""
 
-while lst_stack:
-    reverse_text += lst_stack.pop()
+while stack:
+    reverse_text += stack.pop()
 
 print(reverse_text)
