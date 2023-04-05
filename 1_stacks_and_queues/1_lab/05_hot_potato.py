@@ -1,6 +1,6 @@
 from collections import deque
 
-kids = [name for name in input().split()]
+kids = input().split()
 n_toss = int(input())
 
 queue = deque(kids)
