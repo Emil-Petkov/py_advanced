@@ -1,3 +1,7 @@
+def average_func(grades):
+    return sum(grades) / len(grades)
+
+
 n_students = int(input())
 students_dict = {}
 
@@ -13,5 +17,5 @@ for _ in range(n_students):
 for k, v in students_dict.items():
     total_grades = ' '.join(f"{gr:.2f}" for gr in v)
     return_grade_in_float = list(map(float, total_grades.split(" ")))
-    average_grade = sum(return_grade_in_float) / len(return_grade_in_float)
+    average_grade = average_func(return_grade_in_float)
     print(f"{k} -> {total_grades} (avg: {average_grade:.2f})")
