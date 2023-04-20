@@ -14,7 +14,6 @@ for _ in range(n_people):
     else:
         regular_set.add(reservation)
 
-
 while True:
     guest = input()
     if guest == "END":
