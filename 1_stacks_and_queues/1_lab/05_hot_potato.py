@@ -18,3 +18,4 @@ while len(queue) > 1:
         queue.append(current_kid)
 
 print(f"Last is {queue[0]}")
+
