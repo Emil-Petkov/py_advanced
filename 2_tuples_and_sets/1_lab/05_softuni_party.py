@@ -27,4 +27,3 @@ while True:
 print(len(vip_set) + len(regular_set))
 [print(guest) for guest in sorted(vip_set)]
 [print(guest) for guest in sorted(regular_set)]
-
