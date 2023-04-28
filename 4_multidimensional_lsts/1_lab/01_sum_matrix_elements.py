@@ -1,0 +1,20 @@
+data = list(map(int, input().split(", ")))
+
+total_sum = 0
+matrix = []
+
+for _ in range(data[0]):
+    element = []
+
+    for i in range(1, data[1] + 1):
+        numbers = list(map(int, input().split(", ")))
+        for num in numbers:
+            element.append(num)
+        matrix.append(element)
+        break
+
+for el in matrix:
+    total_sum += sum(el)
+
+print(total_sum)
+print(matrix)
