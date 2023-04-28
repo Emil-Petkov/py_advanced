@@ -6,7 +6,7 @@ matrix = []
 for _ in range(row_columns[0]):
     element = []
 
-    for i in range(1, row_columns[1] + 1):
+    for i in range(row_columns[1]):
         numbers = list(map(int, input().split(", ")))
         for num in numbers:
             element.append(num)
