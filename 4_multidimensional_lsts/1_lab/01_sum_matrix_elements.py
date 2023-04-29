@@ -18,3 +18,4 @@ for el in matrix:
 
 print(total_sum)
 print(matrix)
+
