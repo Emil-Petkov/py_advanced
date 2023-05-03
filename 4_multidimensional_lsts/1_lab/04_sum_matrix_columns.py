@@ -12,3 +12,5 @@ for _ in range(int(n_rows[0])):
 
 for el in sum_of_matrix:
     print(el)
+
+
