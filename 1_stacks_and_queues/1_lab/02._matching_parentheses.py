@@ -12,5 +12,3 @@ for index in range(len(data)):
         close_index = index + 1
 
         print(data[open_index:close_index])
-
-        
