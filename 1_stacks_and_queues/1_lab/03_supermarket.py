@@ -12,3 +12,5 @@ while True:
         if command == "End":
             print(f"{len(queue) - 1} people remaining.")
             break
+
+            
