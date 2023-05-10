@@ -32,3 +32,4 @@ print(f"Last is {kids[0]}")
 #     print(f"Removed {kids.popleft()}")
 #
 # print(f"Last is {kids[0]}")
+
