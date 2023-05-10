@@ -1,21 +1,34 @@
 from collections import deque
 
-kids = input().split()
-n_toss = int(input())
+kids = deque(input().split())
 
-queue = deque(kids)
+n_turns = int(input())
 
 counter = 0
 
-while len(queue) > 1:
+while len(kids) > 1:
     counter += 1
-    current_kid = queue.popleft()
+    current_kid = kids.popleft()
 
-    if counter == n_toss:
+    if counter == n_turns:
         print(f"Removed {current_kid}")
         counter = 0
+
     else:
-        queue.append(current_kid)
+        kids.append(current_kid)
 
-print(f"Last is {queue[0]}")
+print(f"Last is {kids[0]}")
 
+############################################################################
+
+# from collections import deque
+#
+# kids = deque(input().split())
+#
+# n_turns = int(input()) - 1
+#
+# while len(kids) > 1:
+#     kids.rotate(-n_turns)
+#     print(f"Removed {kids.popleft()}")
+#
+# print(f"Last is {kids[0]}")
