@@ -20,3 +20,4 @@ while queue:
         print(f"{queue.popleft()} must wait")
 
 print(f"{dispenser_quantity} liters left")
+
