@@ -1,19 +1,20 @@
-clothe_in_box = list(map(int, input().split()))
-rack_capacity = int(input())
+from collections import deque
 
-total_capacity = rack_capacity
-count_rack = 1
+clothes_in_the_box = deque([int(x) for x in input().split()])
+capacity_of_the_rack = int(input())
 
+total_capacity = capacity_of_the_rack
+rack_counter = 1
 
-while clothe_in_box:
+while clothes_in_the_box:
+    last_element = clothes_in_the_box.pop()
 
-    piece_of_clothing = clothe_in_box[-1]
-    if piece_of_clothing > total_capacity:
-        count_rack += 1
-        total_capacity = rack_capacity
+    if total_capacity >= last_element:
+        total_capacity -= last_element
 
     else:
-        total_capacity -= piece_of_clothing
-        clothe_in_box.pop()
+        total_capacity = capacity_of_the_rack
+        rack_counter += 1
+        total_capacity -= last_element
 
-print(count_rack)
+print(rack_counter)

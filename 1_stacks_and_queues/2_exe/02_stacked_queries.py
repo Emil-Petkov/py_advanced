@@ -1,26 +1,19 @@
 from collections import deque
 
-deque = deque()
+numbers = deque()
 
-n_iteration = int(input())
+map_function = {
+    1: lambda x: numbers.append(x[1]),
+    2: lambda x: numbers.pop() if numbers else None,
+    3: lambda x: print(max(numbers)) if numbers else None,
+    4: lambda x: print(min(numbers)) if numbers else None,
 
-for i in range(n_iteration):
-    data = input().split()
-    if int(data[0]) == 1:
-        deque.append(int(data[1]))
+}
 
-    elif int(data[0]) == 2:
-        if deque:
-            deque.pop()
+for _ in range(int(input())):
+    command = [int(x) for x in input().split()]
+    map_function[command[0]](command)
 
-    elif int(data[0]) == 3:
-        if deque:
-            print(max(deque))
+numbers.reverse()
 
-    elif int(data[0]) == 4:
-        if deque:
-            print(min(deque))
-
-deque.reverse()
-
-print(*deque, sep=", ")
+print(*numbers, sep=", ")
