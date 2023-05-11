@@ -1,10 +1,11 @@
-numbers = list(map(float, input().split()))
-checked_numbers = set()
+numbers = [float(x) for x in input().split()]
+
+dict = {}
 
 for num in numbers:
-    if num in checked_numbers:
-        continue
+    if num not in dict:
+        dict[num] = 0
+    dict[num] += 1
 
-    checked_numbers.add(num)
-
-    print(f"{num} - {numbers.count(num)} times")
+for key, value in dict.items():
+    print(f"{key} - {value} times")
