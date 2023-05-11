@@ -17,3 +17,4 @@ for _ in range(int(input())):
 numbers.reverse()
 
 print(*numbers, sep=", ")
+
