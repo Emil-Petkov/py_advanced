@@ -1,21 +1,19 @@
-def average_func(grades):
-    return sum(grades) / len(grades)
+def average_grade(value):
+    return (sum(value)) / len(value)
 
 
-n_students = int(input())
-students_dict = {}
+students = {}
 
-for _ in range(n_students):
-    current_student = input().split()
-    name = current_student[0]
-    grade = float(current_student[1])
+for _ in range(int(input())):
+    data = input().split()
+    name = data[0]
+    grade = float(data[1])
 
-    if name not in students_dict.keys():
-        students_dict[name] = []
-    students_dict[name].append(grade)
+    if name not in students:
+        students[name] = []
+    students[name].append(grade)
 
-for k, v in students_dict.items():
-    total_grades = ' '.join(f"{gr:.2f}" for gr in v)
-    return_grade_in_float = list(map(float, total_grades.split(" ")))
-    average_grade = average_func(return_grade_in_float)
-    print(f"{k} -> {total_grades} (avg: {average_grade:.2f})")
+for key, value in students.items():
+    grades = " ".join("{:.2f}".format(v) for v in value)
+
+    print(f"{key} -> {grades} (avg: {average_grade(value):.2f})")
