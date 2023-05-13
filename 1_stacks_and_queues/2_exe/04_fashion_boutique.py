@@ -18,3 +18,4 @@ while clothes_in_the_box:
         total_capacity -= last_element
 
 print(rack_counter)
+
