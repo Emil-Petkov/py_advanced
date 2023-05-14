@@ -1,14 +1,9 @@
-rows = int(input())
+matrix = [[int(number) for number in input().split(", ")] for _ in range(int(input()))]
+even_numbers = [[num for num in el if num % 2 == 0] for el in matrix]
 
-result = []
+print(even_numbers)
 
-for _ in range(rows):
-    matrix = [int(x) for x in input().split(", ")]
-    result.append(
-        [x for x in matrix if x % 2 == 0]
-    )
-
-print(result)
+################################################################
 
 # rows = int(input())
 #
