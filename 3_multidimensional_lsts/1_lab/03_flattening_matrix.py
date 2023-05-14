@@ -1,7 +1,3 @@
-rows = int(input())
+data = [[int(num) for num in input().split(", ")] for _ in range(int(input()))]
 
-matrix = [list(map(int, input().split(", "))) for _ in range(rows)]
-
-result = [el for row in matrix for el in row]
-
-print(matrix)
+print([el for row in data for el in row])
