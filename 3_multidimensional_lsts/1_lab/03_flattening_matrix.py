@@ -1,3 +1,3 @@
-data = [[int(num) for num in input().split(", ")] for _ in range(int(input()))]
+data = [[int(numbers) for numbers in input().split(", ")] for _ in range(int(input()))]
 
-print([el for row in data for el in row])
+print([num for row in data for num in row])
