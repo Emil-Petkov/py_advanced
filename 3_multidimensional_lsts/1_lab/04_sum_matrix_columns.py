@@ -1,14 +1,14 @@
-n_rows = input().split(", ")
+n_rows, n_columns = [int(n) for n in input().split(", ")]
+matrix = [[int(data) for data in input().split()] for _ in range(n_rows)]
 
-collect_data = []
+# for col in range(n_columns):
+#     columns_sum = 0
+#
+#     for row in range(n_rows):
+#         columns_sum += matrix[row][col]
+#
+#     print(columns_sum)
 
-for _ in range(int(n_rows[0])):
-    numbers = [int(x) for x in input().split()]
-    collect_data.append(numbers)
+print(*[sum(matrix[row][col] for row in range(n_rows)) for col in range(n_columns)], sep="\n")
 
-    unpack_data = zip(*collect_data)
 
-    sum_of_matrix = [sum(unpack_data) for unpack_data in unpack_data]
-
-for el in sum_of_matrix:
-    print(el)
