@@ -9,3 +9,4 @@ for row in range(len(matrix)):
     secondary_diagonal.append(matrix[row][len(matrix) - row - 1])
 
 print(f"{abs(sum(primary_diagonal) - sum(secondary_diagonal))}")
+
