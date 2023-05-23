@@ -16,3 +16,5 @@ while True:
             break
         else:
             people.append(command)
+
+            
