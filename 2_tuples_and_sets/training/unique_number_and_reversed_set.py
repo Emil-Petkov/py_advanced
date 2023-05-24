@@ -5,10 +5,10 @@
 numbers = {int(n) for n in input("Enter sequence of numbers separated by comma and space:\n").split(", ")}
 
 print("\nUnique numbers in set")
-print(unique_numbers)
+print(numbers)
 
 print("_____________________________________________")
 
 print("Reversed numbers in set")
-reverse_set = list(unique_numbers)[::-1]
+reverse_set = list(numbers)[::-1]
 print(reverse_set)
