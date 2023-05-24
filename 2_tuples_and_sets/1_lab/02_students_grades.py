@@ -17,3 +17,6 @@ for key, value in students.items():
     grades = " ".join("{:.2f}".format(v) for v in value)
 
     print(f"{key} -> {grades} (avg: {average_grade(value):.2f})")
+
+# for k, v in dict.items():
+#     print(f"{k} -> {' '.join([f'{g:.2f}' for g in v])} (avg: {average_grade(v):.2f})")
