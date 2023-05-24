@@ -1,11 +1,15 @@
-numbers = [float(x) for x in input().split()]
+def count_same_values(numbers):
+    dict = {}
 
-dict = {}
+    for num in numbers:
+        if num not in dict:
+            dict[num] = 0
+        dict[num] += 1
 
-for num in numbers:
-    if num not in dict:
-        dict[num] = 0
-    dict[num] += 1
+    for k, v in dict.items():
+        print(f"{k} - {v} times")
 
-for key, value in dict.items():
-    print(f"{key} - {value} times")
+
+count_same_values(map(float, input().split()))
+
+
