@@ -1,11 +1,11 @@
-text = [x for x in input()]
+text = input()
 
-counter = {}
+dict = {}
 
 for el in text:
-    if el not in counter:
-        counter[el] = 0
-    counter[el] += 1
+    if el not in dict:
+        dict[el] = 0
+    dict[el] += 1
 
-for ch, count in sorted(counter.items()):
-    print(f"{ch}: {count} time/s")
+for k in sorted(dict):
+    print(f"{k}: {dict[k]} time/s")
