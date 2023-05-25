@@ -15,3 +15,5 @@ if unique_cars:
 
 else:
     print("Parking Lot is Empty")
+
+    
