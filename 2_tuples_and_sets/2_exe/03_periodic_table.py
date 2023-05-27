@@ -1,7 +1,7 @@
-elements = {el for _ in range(int(input())) for el in input().split()}
+unique_elements = set(el for _ in range(int(input())) for el in input().split())
 
-for element in elements:
-    print(element)
+print(*unique_elements, sep="\n")
+
 
 #####################################################################
 
