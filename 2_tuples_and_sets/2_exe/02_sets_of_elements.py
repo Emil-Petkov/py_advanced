@@ -14,9 +14,9 @@
 # print(*firs_set.intersection(second_set), sep="\n")
 
 
-set_of_elements = [int(num) for num in input().split()]
+n_elements = [int(num) for num in input().split()]
 
-first_set = set([int(input()) for _ in range(set_of_elements[0])])
-second_set = set([int(input()) for _ in range(set_of_elements[1])])
+first_set = set([int(input()) for _ in range(n_elements[0])])
+second_set = set([int(input()) for _ in range(n_elements[1])])
 
 print(*first_set.intersection(second_set), sep="\n")
