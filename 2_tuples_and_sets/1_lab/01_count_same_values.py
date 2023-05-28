@@ -11,4 +11,3 @@ def count_same_values(numbers):
 
 
 count_same_values(map(float, input().split()))
-
