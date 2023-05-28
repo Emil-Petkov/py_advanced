@@ -9,19 +9,29 @@
 
 #################################################################################
 
-longest_intersection = set()
-first_set = set()
-second_set = set()
+n_lines = int(input())
 
-for _ in range(int(input())):
-    first_data, second_data = [x.split(",") for x in input().split("-")]
+longest_intersection = []
 
-    first_range = set(range(int(first_data[0]), int(first_data[1]) + 1))
-    second_range = set(range(int(second_data[0]), int(second_data[1]) + 1))
+for _ in range(n_lines):
+    current_range = input().split("-")
 
-    intersection = first_range.intersection(second_range)
+    first_set = set()
+    second_set = set()
 
-    if len(intersection) > len(longest_intersection):
+    first_start, first_end = [int(x) for x in current_range[0].split(",")]
+    second_start, second_end = [int(x) for x in current_range[1].split(",")]
+
+    for x in range(first_start, first_end + 1):
+        first_set.add(x)
+
+    for y in range(second_start, second_end + 1):
+        second_set.add(y)
+
+    intersection = first_set.intersection(second_set)
+
+    if len(longest_intersection) < len(intersection):
         longest_intersection = intersection
 
-print(f"Longest intersection is [{', '.join(map(str, longest_intersection))}] with length {len(longest_intersection)}")
+print(f"Longest intersection is {list(longest_intersection)} with length {len(longest_intersection)}")
+
