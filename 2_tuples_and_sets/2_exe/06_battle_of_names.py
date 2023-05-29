@@ -21,3 +21,5 @@ elif sum(odd_set) > sum(even_set):
 
 elif sum(even_set) > sum(odd_set):
     print(*odd_set.symmetric_difference(even_set), sep=", ")
+
+    
