@@ -1,21 +1,25 @@
-n_names = int(input())
+n_lines = int(input())
 
-even_numbers = set()
-odd_numbers = set()
+even_set = set()
+odd_set = set()
 
-for i in range(1, n_names + 1):
+for row in range(1, n_lines + 1):
     current_name = input()
 
-    convert_el_in_ord = [ord(el) for el in current_name]
+    ascii_sum_of_name = sum([ord(el) for el in current_name]) // row
 
-    sum_of_characters = sum(convert_el_in_ord) // i
-    if sum_of_characters % 2 == 0:
-        even_numbers.add(sum_of_characters)
+    if ascii_sum_of_name % 2 == 0:
+        even_set.add(ascii_sum_of_name)
     else:
-        odd_numbers.add(sum_of_characters)
+        odd_set.add(ascii_sum_of_name)
 
-if sum(even_numbers) > sum(odd_numbers):
-    print(*even_numbers.symmetric_difference(odd_numbers), sep=", ")
-else:
-    print(*odd_numbers.difference(even_numbers), sep=", ")
+if sum(even_set) == sum(odd_set):
+    print(*even_set.union(odd_set), sep=", ")
 
+elif sum(odd_set) > sum(even_set):
+    print(*odd_set.difference(even_set), sep=", ")
+
+elif sum(even_set) > sum(odd_set):
+    print(*odd_set.symmetric_difference(even_set), sep=", ")
+
+    
