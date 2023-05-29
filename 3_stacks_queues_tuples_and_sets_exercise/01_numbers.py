@@ -39,3 +39,4 @@ for _ in range(n_lines):
 
 print(*sorted(first_set), sep=", ")
 print(*sorted(second_set), sep=", ")
+
