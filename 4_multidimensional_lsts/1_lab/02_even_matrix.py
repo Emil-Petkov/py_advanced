@@ -1,7 +1,11 @@
-matrix = [[int(number) for number in input().split(", ")] for _ in range(int(input()))]
-even_numbers = [[num for num in el if num % 2 == 0] for el in matrix]
+print([[int(x) for x in input().split(", ") if int(x) % 2 == 0] for _ in range(int(input()))])
 
-print(even_numbers)
+#######################################################################################
+
+# matrix = [[int(number) for number in input().split(", ")] for _ in range(int(input()))]
+# even_numbers = [[num for num in el if num % 2 == 0] for el in matrix]
+
+# print(even_numbers)
 
 ################################################################
 
