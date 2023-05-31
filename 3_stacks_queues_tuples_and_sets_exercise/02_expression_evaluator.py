@@ -27,3 +27,4 @@ for el in expression:
         nums.append(int(el))
 
 print(nums.pop())
+
