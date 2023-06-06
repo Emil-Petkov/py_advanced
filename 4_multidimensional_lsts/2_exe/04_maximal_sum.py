@@ -19,4 +19,3 @@ for rows in range(len(matrix) - 2):
 
 print(f"Sum = {max_sum}")
 [print(*el) for el in current_numbers[-1]]
-
