@@ -23,3 +23,4 @@ max_indexes = current_indexes[-1]
 print(max_indexes[0], max_indexes[1])
 print(max_indexes[2], max_indexes[3])
 print(max_sum)
+
