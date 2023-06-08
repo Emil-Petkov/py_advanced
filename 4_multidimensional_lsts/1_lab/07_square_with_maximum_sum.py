@@ -1,26 +1,27 @@
-n_rows, n_columns = map(int, input().split(", "))
+rows, columns = [int(x) for x in input().split(", ")]
 
-matrix = [[int(el) for el in input().split(", ")] for _ in range(n_rows)]
+matrix = [[int(c) for c in input().split(", ")] for r in range(rows)]
 
 max_sum = 0
-current_indexes = []
+sum_of_max_digits = []
 
-for rows in range(n_rows - 1):
-    for column in range(n_columns - 1):
-        el = matrix[rows][column]
-        next_el = matrix[rows][column + 1]
-        down_el = matrix[rows + 1][column]
-        diagonal_el = matrix[rows + 1][column + 1]
+for row in range(rows - 1):
+    for col in range(columns - 1):
 
-        square_sum = el + next_el + down_el + diagonal_el
+        current_num = matrix[row][col]
+        right_num = matrix[row][col + 1]
+        down_num = matrix[row + 1][col]
+        diagonal_num = matrix[row + 1][col + 1]
 
-        if square_sum > max_sum:
-            current_indexes.append([el, next_el, down_el, diagonal_el])
-            max_sum = square_sum
+        current_sum = current_num + right_num + down_num + diagonal_num
 
-max_indexes = current_indexes[-1]
+        if current_sum > max_sum:
+            digits = current_num, right_num, down_num, diagonal_num
+            sum_of_max_digits.append(digits)
+            max_sum = current_sum
 
-print(max_indexes[0], max_indexes[1])
-print(max_indexes[2], max_indexes[3])
+dig = sum_of_max_digits[-1]
+print(dig[0], dig[1])
+print(dig[2], dig[3])
 print(max_sum)
 
