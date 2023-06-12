@@ -1,10 +1,12 @@
 def multiply(*args):
-    result = 1
-    for arg in args:
-        result *= arg
-    return result
+    sum_of_multiply = 1
+
+    for num in args:
+        sum_of_multiply *= num
+
+    return sum_of_multiply
 
 
-# print(multiply(1, 4, 5))  # 20
-# print(multiply(4, 5, 6, 1, 3))  # 360
-# print(multiply(2, 0, 1000, 5000))  # 0
+print(multiply(1, 4, 5))
+print(multiply(4, 5, 6, 1, 3))
+print(multiply(2, 0, 1000, 5000))
