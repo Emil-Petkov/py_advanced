@@ -17,7 +17,6 @@ def get_info(name, town, age):
 #     "age": 78
 # }
 #
-
 # print(get_info(**person1))  # This is Emil from Sofia and he is 31 years old
 # print(get_info(**person2))  # This is Nadezhda from Sofia and he is 63 years old
 # print(get_info(**person3))  # This is Ivancho from Rakita village and he is 78 years old
