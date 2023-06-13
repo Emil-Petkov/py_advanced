@@ -42,3 +42,4 @@ def get_info(name, town, age):
 
 
 # print(get_info(**{"name": "George", "town": "Sofia", "age": 20}))
+
